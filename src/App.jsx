@@ -1,12 +1,14 @@
 import "./App.scss";
-import LetterTile from "./components/LetterTile";
+import Keyboard from "./containers/Keyboard/Keyboard";
+import Tiles from "./containers/Tiles/Tiles";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <h1 className="game-title">Wordle</h1>
       <div className="game-tiles">
-        <LetterTile />
+        <Tiles />
+        <Keyboard />
       </div>
     </div>
   );
