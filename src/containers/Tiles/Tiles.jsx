@@ -3,16 +3,23 @@ import "./Tiles.scss";
 import LetterTile from "../../components/LetterTile";
 
 const Tiles = () => {
-  // A function that creates this card and returns 5 x 5
-  const populateTiles = LetterTile.map((tile) => {
-    return (
-      <div>
-        <LetterTile tile={tile} />
-      </div>
-    );
-  });
+  const populateTiles = () => {
+    const tile = [];
+    for (let i = 0; i < 5; i++) {
+      tile.push(<LetterTile key={i} />);
+    }
+    return tile;
+  };
 
-  return <div className="tiles">{populateTiles}</div>;
+  return (
+    <div className="tiles">
+      <div className="tiles__row-one">{populateTiles()}</div>
+      <div className="tiles__row-two">{populateTiles()}</div>
+      <div className="tiles__row-three">{populateTiles()}</div>
+      <div className="tiles__row-four">{populateTiles()}</div>
+      <div className="tiles__row-five">{populateTiles()}</div>
+    </div>
+  );
 };
 
 export default Tiles;
