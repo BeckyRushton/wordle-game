@@ -1,6 +1,10 @@
 import React from "react";
 import "./Keyboard.scss";
 
+// Function that turns the keyboard tile green if it is in the
+// word and turns the tile red if it isn't. Also leaves the enter
+// and back buttons the same.
+
 const Keyboard = () => {
   const qwertyArr = [
     "Q",
