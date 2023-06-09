@@ -1,6 +1,30 @@
 .keyboard-tiles {
   margin: 20px;
-  border: 2px solid black;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  &__letter {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(65, 117, 106);
+    color: white;
+  }
+  &__letter:hover {
+    background-color: yellow;
+    color: black;
+    transition: 300ms;
+  }
 }
