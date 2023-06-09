@@ -1,9 +1,14 @@
 .tiles {
   width: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background-color: rgb(194, 192, 219);
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
+
+  &__row {
+    display: flex;
+  }
 }

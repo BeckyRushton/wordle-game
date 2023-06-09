@@ -5,7 +5,7 @@ import "./Keyboard.scss";
 // word and turns the tile red if it isn't. Also leaves the enter
 // and back buttons the same.
 
-const Keyboard = () => {
+const Keyboard = ({ handleClick }) => {
   const qwertyArr = [
     "Q",
     "W",
@@ -36,16 +36,16 @@ const Keyboard = () => {
     "←",
     "✓",
   ];
+
   return (
     <div className="keyboard-tiles">
       {qwertyArr.map((item, index) => (
-        <p className="keyboard-tiles__letter" key={index}>
+        <p className="keyboard-tiles__letter" onClick={handleClick} key={index}>
           {item}
         </p>
       ))}
     </div>
   );
-  // JSX keyboard, map function
 };
 
 export default Keyboard;
