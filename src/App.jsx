@@ -7,8 +7,19 @@ function App() {
   const [guessArr, setGuessArr] = useState([]);
 
   const handleClick = (event) => {
-    console.log(event);
-    setGuessArr([...guessArr].push(event.target.innerText));
+    console.log(event.target.innerText);
+    if (event.target.innerText === "←") {
+      const updatedArr = [...guessArr];
+      updatedArr.pop();
+      setGuessArr(updatedArr);
+    } else if (guessArr.length > 0) {
+      const updatedArr = [...guessArr];
+      updatedArr.push(event.target.innerText);
+      console.log(guessArr);
+      setGuessArr(updatedArr);
+    } else {
+      setGuessArr([event.target.innerText]);
+    }
   };
   return (
     <div className="app">

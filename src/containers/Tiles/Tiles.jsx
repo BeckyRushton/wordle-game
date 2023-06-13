@@ -10,12 +10,13 @@ import LetterTile from "../../components/LetterTile";
 // populate with current guess
 
 const Tiles = ({ guessArr }) => {
+  console.log(guessArr);
   let letterCount = 0;
 
   const populateTiles = () => {
     const tile = [];
     for (let i = 0; i < 5; i++) {
-      tile.push(<LetterTile key={i} id={letterCount} />);
+      tile.push(<LetterTile key={i} id={letterCount} guessArr={guessArr} />);
       letterCount++;
     }
     return tile;
